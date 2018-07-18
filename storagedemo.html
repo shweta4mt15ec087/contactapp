@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+   <html><head>
+    <title>HTML localStorage</title>
+    <script>
+       if(localStorage.getItem("contacts") == null){
+       var contacts = [];
+           var contact = {"name": "Krish"};
+           contacts.push(contact);
+           localStorage.setItem("contacts",JSON.stringify(contacts));
+       }else{
+           var contacts =
+               JSON.parse(localStorage.getItem("contacts"));
+           var contact={"name":"Shraman"};
+           contacts.push(contact);
+           localStorage.setItem("contacts",JSON.stringify(contacts));
+           alert(contacts.toString());
+           
+       }
+       
+       </script>
+   
+ </head>
+ <h3>localStorage Demo</h3>
+</html>
+
+ 
+ 
